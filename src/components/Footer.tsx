@@ -1,5 +1,4 @@
 import React from 'react';
-import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
 import LocationOnRoundedIcon from '@mui/icons-material/LocationOnRounded';
 import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
@@ -11,6 +10,7 @@ import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import ApartmentRoundedIcon from '@mui/icons-material/ApartmentRounded';
 import FactoryRoundedIcon from '@mui/icons-material/FactoryRounded';
 import AccountBalanceRoundedIcon from '@mui/icons-material/AccountBalanceRounded';
+import logo from '../assets/nextGensolarLogo.jpeg';
 import './Footer.css';
 
 const footerServices = [
@@ -36,9 +36,7 @@ const Footer: React.FC = () => {
         <div className="footer-content">
           <div className="footer-brand">
             <a href="#home" className="footer-logo">
-              <span className="logo-icon">
-                <WbSunnyRoundedIcon fontSize="small" />
-              </span>
+              <img src={logo} alt="NextGen Solar Solutions logo" className="logo-image" />
               <span>Next<span className="brand-accent">G</span>en Solar Solutions</span>
             </a>
             <p>Leading the way in sustainable solar energy solutions for a brighter future.</p>

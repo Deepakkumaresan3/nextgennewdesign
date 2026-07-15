@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
+import logo from '../assets/nextGensolarLogo.jpeg';
 import './Loader.css';
 
 interface LoaderProps {
@@ -37,7 +37,7 @@ const Loader: React.FC<LoaderProps> = ({ onFinish }) => {
             <circle cx="100" cy="100" r="74" />
           </svg>
           <div className="loader-logo-icon">
-            <WbSunnyRoundedIcon />
+            <img src={logo} alt="NextGen Solar Solutions logo" className="loader-logo-image" />
           </div>
         </div>
 

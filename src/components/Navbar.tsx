@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import logo from '../assets/nextGensolarLogo.jpeg';
 import './Navbar.css';
 
 const navLinks = [
@@ -48,9 +48,7 @@ const Navbar: React.FC = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <a href="#home" className="nav-logo">
-          <span className="logo-icon">
-            <WbSunnyRoundedIcon fontSize="small" />
-          </span>
+          <img src={logo} alt="NextGen Solar Solutions logo" className="logo-image" />
           <span className="logo-text">Next<span className="brand-accent">G</span>en Solar Solutions</span>
         </a>
 

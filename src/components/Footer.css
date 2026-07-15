@@ -28,15 +28,12 @@
   text-shadow: 0 0 18px rgba(45, 211, 111, 0.28);
 }
 
-.footer-brand .logo-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 9px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--gradient-primary);
-  color: #ffffff;
+.footer-brand .logo-image {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 .footer-brand p {
