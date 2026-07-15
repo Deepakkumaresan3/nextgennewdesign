@@ -50,13 +50,6 @@ const values = [
   },
 ];
 
-const stats = [
-  { value: '500+', label: 'Projects Completed' },
-  { value: '10MW+', label: 'Energy Generated' },
-  { value: '98%', label: 'Customer Satisfaction' },
-  { value: '5+', label: 'Years Experience' },
-];
-
 const About: React.FC = () => {
   return (
     <section className="section" id="about">
@@ -95,14 +88,6 @@ const About: React.FC = () => {
           ))}
         </div>
 
-        <div className="stats-bar">
-          {stats.map((s) => (
-            <div className="stat-item" key={s.label}>
-              <div className="stat-number">{s.value}</div>
-              <div className="stat-label">{s.label}</div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

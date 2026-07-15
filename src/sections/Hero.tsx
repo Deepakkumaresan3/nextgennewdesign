@@ -6,12 +6,6 @@ import KeyboardArrowDownRoundedIcon from '@mui/icons-material/KeyboardArrowDownR
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import './Hero.css';
 
-const stats = [
-  { value: '500+', label: 'Installations' },
-  { value: '10 MW+', label: 'Energy Generated' },
-  { value: '98%', label: 'Client Satisfaction' },
-];
-
 const highlights = ['Free Consultation', 'Customized Solutions', 'No Obligation'];
 
 const Hero: React.FC = () => {
@@ -51,14 +45,6 @@ const Hero: React.FC = () => {
           ))}
         </div>
 
-        <div className="hero-stats">
-          {stats.map((s) => (
-            <div className="hero-stat" key={s.label}>
-              <span className="hero-stat-value">{s.value}</span>
-              <span className="hero-stat-label">{s.label}</span>
-            </div>
-          ))}
-        </div>
       </div>
 
       <div className="hero-side" aria-hidden="true">

@@ -14,7 +14,25 @@ import './Products.css';
 
 const accents = ['indigo', 'cyan', 'violet', 'amber'] as const;
 
-const products = [
+type ProductSpec = {
+  label: string;
+  value: string;
+};
+
+type ProductItem = {
+  icon: React.ReactNode;
+  image?: string;
+  title: string;
+  badge?: string;
+  price?: string;
+  description: string;
+  specs: ProductSpec[];
+  highlights: string[];
+};
+
+const emptySpecs: ProductSpec[] = [];
+
+const products: ProductItem[] = [
   {
     icon: <SolarPowerRoundedIcon />,
     image: pvModulesImg,
@@ -22,11 +40,7 @@ const products = [
     badge: 'Best Seller',
     price: '12,000',
     description: 'High-efficiency monocrystalline photovoltaic panels engineered for maximum energy conversion in every season.',
-    specs: [
-      { label: 'Power Output', value: '440W' },
-      { label: 'Efficiency', value: '21%' },
-      { label: 'Warranty', value: '25 Years' },
-    ],
+    specs: emptySpecs,
     highlights: ['Monocrystalline', 'Weather Resistant'],
   },
   {
@@ -35,11 +49,7 @@ const products = [
     title: 'Solar Inverters',
     price: '45,000',
     description: 'Advanced string, micro, and hybrid inverters that convert DC to AC efficiently while staying fully grid-compatible.',
-    specs: [
-      { label: 'Power Rating', value: '5kW' },
-      { label: 'Efficiency', value: '98%' },
-      { label: 'Warranty', value: '10 Years' },
-    ],
+    specs: emptySpecs,
     highlights: ['String', 'Micro', 'Hybrid'],
   },
   {
@@ -48,11 +58,7 @@ const products = [
     badge: 'New',
     price: '85,000',
     description: 'Reliable lithium-ion (LiFePO4) storage that banks surplus energy for uninterrupted power, day or night.',
-    specs: [
-      { label: 'Capacity', value: '10kWh' },
-      { label: 'Warranty', value: '10 Years' },
-      { label: 'Cycles', value: '6000+' },
-    ],
+    specs: emptySpecs,
     highlights: ['Fast Charging', 'Scalable'],
   },
   {
@@ -61,25 +67,21 @@ const products = [
     title: 'Solar Mounting Systems',
     price: '8,500',
     description: 'Corrosion-resistant roof, metal-sheet, and ground mounting engineered to hold firm on any terrain or wind load.',
-    specs: [
-      { label: 'Material', value: 'Aluminum' },
-      { label: 'Wind Rating', value: '150 kmph' },
-      { label: 'Warranty', value: '15 Years' },
-    ],
+    specs: emptySpecs,
     highlights: ['Roof', 'Metal Sheet', 'Ground'],
   },
   {
     icon: <ShieldRoundedIcon />,
     title: 'Protection Devices',
     description: 'Complete electrical protection for your solar array, from grid-side surges to DC-side faults.',
-    specs: [],
+    specs: emptySpecs,
     highlights: ['ACDB', 'DCDB', 'Lightning Arrester', 'SPD'],
   },
   {
     icon: <CableRoundedIcon />,
     title: 'Conductors & Cabling',
     description: 'Certified AC, DC, and earthing cable engineered for safe, low-loss power transmission.',
-    specs: [],
+    specs: emptySpecs,
     highlights: ['AC Cable', 'DC Cable', 'Earthing Cable'],
   },
 ];
