@@ -142,8 +142,8 @@ const Products: React.FC = () => {
               <div className="product-footer">
                 {p.price && (
                   <div className="product-price">
-                    <span>Starting from</span>
-                    <strong>₹{p.price}</strong>
+                    <span>Ideal for</span>
+                    <strong>{p.title}</strong>
                   </div>
                 )}
                 <button type="button" className="btn btn-secondary product-enquire">

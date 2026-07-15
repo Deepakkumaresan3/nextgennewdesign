@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a href="#contact" className="nav-link btn-quote" onClick={() => setIsOpen(false)}>
-            Get Quote
+            Book Consultation
           </a>
         </div>
 

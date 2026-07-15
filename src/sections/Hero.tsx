@@ -28,14 +28,14 @@ const Hero: React.FC = () => {
         </h1>
         <p>
           NextGen Solar Solutions designs, installs, and maintains high-performance
-          solar systems for homes, businesses, and industry — cutting your energy
-          bills while cutting carbon.
+          solar systems for homes, businesses, and industry — delivering reliable
+          clean energy with a simple, stress-free experience.
         </p>
 
         <div className="hero-buttons">
           <a href="#contact" className="btn btn-primary">
             <BoltRoundedIcon fontSize="small" />
-            Get a Free Quote
+            Book a Consultation
           </a>
           <a href="#services" className="btn btn-secondary">
             Explore Services

@@ -24,13 +24,13 @@ const services = [
   {
     icon: <HomeRoundedIcon />,
     title: 'Residential Solar',
-    description: 'Custom rooftop systems designed for maximum savings on your home energy bills.',
+    description: 'Custom rooftop systems designed for dependable performance and long-term energy independence.',
     features: ['Site Assessment', 'System Design', 'Professional Installation', 'Ongoing Maintenance'],
   },
   {
     icon: <ApartmentRoundedIcon />,
     title: 'Commercial Solar',
-    description: 'Lower operating costs and showcase sustainability with tailored business installs.',
+    description: 'Reliable commercial solutions that support sustainability and long-term energy confidence.',
     features: ['ROI Analysis', 'Custom Design', 'Grid Integration', 'Performance Monitoring'],
   },
   {
@@ -54,7 +54,7 @@ const services = [
   {
     icon: <LightbulbRoundedIcon />,
     title: 'Energy Consulting',
-    description: 'Independent guidance on system sizing, incentives, and ROI before you commit.',
+    description: 'Independent guidance on system sizing, planning, and long-term performance before you commit.',
     features: ['Energy Audit', 'Cost-Benefit Analysis', 'System Recommendations', 'Incentives Guidance'],
   },
   {
@@ -110,7 +110,7 @@ const whyChooseUs = [
   {
     icon: <DesignServicesRoundedIcon />,
     title: 'Customized Solutions',
-    description: 'Every system is designed around your roof, usage, and budget — never one-size-fits-all.',
+    description: 'Every system is designed around your roof, usage, and energy goals — never one-size-fits-all.',
   },
   {
     icon: <SupportAgentRoundedIcon />,
@@ -119,8 +119,8 @@ const whyChooseUs = [
   },
   {
     icon: <PriceCheckRoundedIcon />,
-    title: 'Competitive Pricing',
-    description: 'Transparent quotes with no hidden fees, plus flexible financing options.',
+    title: 'Clear Planning',
+    description: 'Straightforward guidance and transparent next steps, with no pressure to rush.',
   },
 ];
 

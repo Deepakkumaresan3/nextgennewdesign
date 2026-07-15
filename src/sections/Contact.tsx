@@ -53,10 +53,10 @@ const Contact: React.FC = () => {
       <div className="container">
         <div className="section-header">
           <span className="eyebrow">Get In Touch</span>
-          <h2 className="section-title">Get Your Free Solar Quote</h2>
+          <h2 className="section-title">Book Your Solar Consultation</h2>
           <p className="section-description">
-            Tell us about your property and we&apos;ll get back to you with a
-            no-obligation plan within 24 hours.
+            Share your property details and we&apos;ll get back to you with a
+            thoughtful, no-obligation plan within 24 hours.
           </p>
         </div>
 
@@ -124,8 +124,8 @@ const Contact: React.FC = () => {
               <div className="form-group">
                 <input
                   type="number"
-                  name="Monthly Electricity Bill (INR)"
-                  placeholder="Monthly Electricity Bill (₹)"
+                  name="Monthly Electricity Usage"
+                  placeholder="Monthly Usage (Units)"
                   disabled={status === 'sending'}
                 />
               </div>
@@ -142,7 +142,7 @@ const Contact: React.FC = () => {
 
             <button type="submit" className="btn btn-primary btn-block" disabled={status === 'sending'}>
               <BoltRoundedIcon fontSize="small" />
-              {status === 'sending' ? 'Sending…' : 'Request Free Quote'}
+              {status === 'sending' ? 'Sending…' : 'Request Consultation'}
             </button>
 
             {status === 'success' && (
@@ -177,7 +177,7 @@ const Contact: React.FC = () => {
           <p>Schedule a free consultation and take the first step towards energy independence.</p>
           <a href="#contact" className="btn btn-primary">
             <BoltRoundedIcon fontSize="small" />
-            Get a Free Quote
+            Book Consultation
           </a>
         </div>
       </div>
