@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Remove-Item -Path \"C:\\\\Users\\\\Pramoth Shankar\\\\Downloads\\\\deepak\\\\nextGenApp-main\\\\nextGenApp-main\\\\src\\\\pages\" -Recurse -Force -Confirm:$false)"
+    ]
+  }
+}

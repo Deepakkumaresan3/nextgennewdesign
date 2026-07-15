@@ -1,0 +1,104 @@
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.faq-item.open {
+  background: var(--color-surface-strong);
+  border-color: var(--border-primary);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 26px;
+  background: none;
+  text-align: left;
+}
+
+.faq-number {
+  flex-shrink: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.3px var(--color-border);
+  transition: -webkit-text-stroke-color 0.35s ease;
+}
+
+.faq-item:hover .faq-number,
+.faq-item.open .faq-number {
+  -webkit-text-stroke-color: var(--color-primary);
+}
+
+.faq-question-text {
+  flex: 1;
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.faq-toggle-icon {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--color-primary) 18%, transparent);
+  color: var(--color-primary-soft);
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.faq-item.open .faq-toggle-icon {
+  background: var(--gradient-accent);
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+.faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+}
+
+.faq-item.open .faq-answer-wrapper {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.faq-answer {
+  padding: 0 26px 24px 68px;
+  color: var(--color-muted);
+  font-size: 0.96rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+  .faq-question {
+    padding: 18px 20px;
+    gap: 12px;
+  }
+
+  .faq-answer {
+    padding: 0 20px 20px 20px;
+  }
+}
