@@ -6,6 +6,7 @@
 .carousel-viewport {
   overflow: hidden;
   border-radius: 8px;
+  touch-action: pan-y;
 }
 
 .carousel-track {
@@ -19,6 +20,7 @@
 .carousel-item {
   display: flex;
   flex-shrink: 0;
+  min-width: 0;
 }
 
 .carousel-item > * {

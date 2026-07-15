@@ -46,8 +46,11 @@
   color: #ffffff;
 }
 
-.logo-text strong {
-  color: var(--color-primary-soft);
+.brand-accent {
+  display: inline-block;
+  color: #2dd36f;
+  font-weight: 900;
+  text-shadow: 0 0 18px rgba(45, 211, 111, 0.28);
 }
 
 .nav-menu {

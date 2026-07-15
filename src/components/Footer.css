@@ -22,8 +22,10 @@
   margin-bottom: 14px;
 }
 
-.footer-brand .footer-logo strong {
-  color: var(--color-primary-soft);
+.footer-brand .footer-logo .brand-accent {
+  color: #2dd36f;
+  font-weight: 900;
+  text-shadow: 0 0 18px rgba(45, 211, 111, 0.28);
 }
 
 .footer-brand .logo-icon {

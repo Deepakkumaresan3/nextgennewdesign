@@ -115,8 +115,10 @@
   animation: loader-fade-up 0.6s ease 0.65s forwards;
 }
 
-.loader-wordmark strong {
-  color: var(--color-primary-soft);
+.loader-wordmark .brand-accent {
+  color: #2dd36f;
+  font-weight: 900;
+  text-shadow: 0 0 18px rgba(45, 211, 111, 0.28);
 }
 
 .loader-tagline {

@@ -42,7 +42,7 @@ const Loader: React.FC<LoaderProps> = ({ onFinish }) => {
         </div>
 
         <div className="loader-wordmark">
-          Next<strong>Gen</strong> Solar
+          Next<span className="brand-accent">G</span>en Solar
         </div>
         <div className="loader-tagline">Powering a Sustainable Future</div>
       </div>

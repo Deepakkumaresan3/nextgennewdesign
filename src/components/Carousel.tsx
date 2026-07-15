@@ -26,6 +26,7 @@ const Carousel: React.FC<CarouselProps> = ({ children, ariaLabel, autoPlay = tru
   const [itemsPerView, setItemsPerView] = useState(() => getItemsPerView(window.innerWidth));
   const [page, setPage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
 
   useEffect(() => {
     const el = viewportRef.current;
@@ -70,14 +71,38 @@ const Carousel: React.FC<CarouselProps> = ({ children, ariaLabel, autoPlay = tru
   const startIndex = Math.min(page * itemsPerView, maxStart);
   const offset = itemWidth > 0 ? startIndex * (itemWidth + GAP) : 0;
 
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    setIsPaused(true);
+    setTouchStartX(event.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX === null) {
+      setIsPaused(false);
+      return;
+    }
+
+    const deltaX = event.changedTouches[0].clientX - touchStartX;
+    const threshold = 50;
+
+    if (deltaX < -threshold) {
+      goTo(page + 1);
+    } else if (deltaX > threshold) {
+      goTo(page - 1);
+    }
+
+    setTouchStartX(null);
+    setIsPaused(false);
+  };
+
   return (
     <div
       className={`carousel ${className}`.trim()}
       aria-label={ariaLabel}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={() => setIsPaused(true)}
-      onTouchEnd={() => setIsPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <div className="carousel-viewport" ref={viewportRef}>
         <div className="carousel-track" style={{ transform: `translateX(-${offset}px)` }}>

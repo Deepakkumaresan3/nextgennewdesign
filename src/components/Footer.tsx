@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
               <span className="logo-icon">
                 <WbSunnyRoundedIcon fontSize="small" />
               </span>
-              <span>Next<strong>Gen</strong> Solar</span>
+              <span>Next<span className="brand-accent">G</span>en Solar Solutions</span>
             </a>
             <p>Leading the way in sustainable solar energy solutions for a brighter future.</p>
           </div>

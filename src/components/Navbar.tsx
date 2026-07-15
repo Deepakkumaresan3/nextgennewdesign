@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           <span className="logo-icon">
             <WbSunnyRoundedIcon fontSize="small" />
           </span>
-          <span className="logo-text">Next<strong>Gen</strong> Solar</span>
+          <span className="logo-text">Next<span className="brand-accent">G</span>en Solar Solutions</span>
         </a>
 
         <div className={`nav-menu ${isOpen ? 'active' : ''}`}>
